@@ -144,3 +144,45 @@ ul>li:not(:last-child) {
   align-items: center;
   justify-content: space-between;
 }
+
+
+
+
+
+
+
+.seriesBlock {
+  display: flex;
+  margin-bottom: 119px;
+}
+
+.series_1 {
+  margin-right: 30px;
+}
+
+.series_2 {
+  margin-right: 30px;
+}
+
+.series_3 {
+  margin-right: 30px;
+}
+
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.privacyPolicy {
+  top: 860px;
+  left: 1011px;
+}
+
+.termsOfService {
+  top: 860px;
+  left: 1123px;
+}
+
+ 
