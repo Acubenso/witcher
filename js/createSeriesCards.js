@@ -4,7 +4,7 @@ class CreateSeriesCards {
 		this.baseContainer = document.getElementById(baseContainerId);
 
 		if (this.baseContainer == null) {
-			console.error(`base container => ${this.baseContainer}`)
+			console.error(`base container => ${this.baseContainer}`);
 		} else {
 			// якщо контейнер знайдено, то ми його чистимо перед тим, як заповнити даними
 			while (this.baseContainer.firstChild) {
@@ -26,8 +26,21 @@ class CreateSeriesCards {
 		seriesWrapper.innerHTML = `
 			<p>Серія #1</p>
 			<p>Початок кінця</p>
-			<iframe src="./video/season_1_series_1.mp4" width="164" height="113" scrolling="no" allow="autoplay; fullscreen"></iframe>
+			<img src="./img/card-image.jpg">
+
+			<p>Серія #2</p>
+			<p>Чотири знаки</p>
+			<img src="./img/card-image2x.jpg">
+
+			<p>Серія #3</p>
+            <p>Зняти маски</p>
+            <img src="./img/card-image3x.jpg">
+		
+			<p>Серія #4</p>
+            <p>Розслідування</p>
+            <img src="./img/card-image4x.jpg">
 		`;
+		
 
 		this.baseContainer.appendChild(seriesWrapper);
 	}
@@ -35,18 +48,3 @@ class CreateSeriesCards {
 
 let createSeriesCards = new CreateSeriesCards('series-container');
 
-
-
-// console.log("Hello");
-
-
-
-// const trailer = document.querySelector('.btn-play');
-
-// function playTrailer(){
-// 	trailer.addEventListener('click', () => {
-// 		let createVideoTag = document.createElemet('div');
-// 		createVideoTag.innerHTML = "<video src="../video/trailer.mp4"></video>";	 
-// 	});
-// 	return createVideoTag; 
-// }	
