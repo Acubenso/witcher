@@ -29,6 +29,7 @@ class CreateSeriesCards {
 			seriesWrapper.classList.add('series-wrapper');
 			seriesWrapper.style.cssText = `
 				background: url('${el.image}') no-repeat;
+				background-position: center;
 			`;
 
 			seriesWrapper.innerHTML = `

@@ -282,7 +282,6 @@ footer {
   height: 115px;
   border-radius: 20px;
   cursor: pointer;
-  background-position: top center;
   transition: all 0.4s ease;
 }
 
