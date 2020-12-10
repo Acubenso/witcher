@@ -1,4 +1,3 @@
-// Основные стили документа
 html {
   box-sizing: border-box;
 }
@@ -8,8 +7,6 @@ html {
 *::after {
   box-sizing: inherit;
 }
-
-// Правильное скрытие элементов для ридера
 
 body {
   min-width: 320px;
@@ -71,7 +68,15 @@ video {
   padding: 0;
 }
 
-// svg fill
 .svg-icon {
   fill: currentColor;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+
+.series-block.d-flex div:not(:last-child) {
+  margin-right: 20px;
 }

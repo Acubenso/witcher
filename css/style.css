@@ -57,6 +57,7 @@ svg:hover {
 
 .rating {
   border: none;
+  margin-bottom: 50px;
 }
 
 .rating-name {
@@ -131,7 +132,7 @@ svg:hover {
     font-family: 'Pirata One', cursive;
     font-weight: 500;
     font-size: 76px;
-    margin-bottom: 10px;
+    margin-bottom: 45px;
 }
 
 .serialDeslription {
@@ -273,4 +274,32 @@ footer {
   top: 860px;
   left: 1300px;
   margin-right: 25px;
+}
+
+.series-wrapper {
+  padding: 10px;
+  width: 165px;
+  height: 115px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-position: top center;
+  transition: all 0.4s ease;
+}
+
+.series-wrapper:hover {
+  transform: scale(1.1);
+}
+
+.series-wrapper:active {
+  transform: scale(1);
+}
+
+.series-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.series-count {
+  margin-top: 45px;
+  font-size: 12px;
 }
