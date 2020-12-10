@@ -27,6 +27,7 @@ body {
     width: 50px;
     height: 36px;
     margin-right: 60px;
+    cursor: pointer;
 }
 
 ul>li:not(:last-child) {
@@ -37,8 +38,8 @@ ul>li:not(:last-child) {
     margin-right: 25px;
 }
 
-.social > a:hover {
-  background-color: red;
+svg:hover {
+  stroke: yellow; 
 }
 
 /*======================= Main ========================================*/
@@ -228,8 +229,7 @@ ul>li:not(:last-child) {
 
 
 
-
-.seriesBlock {
+#seriesContainer {
   display: flex;
   margin-bottom: 119px;
 }
@@ -246,21 +246,31 @@ ul>li:not(:last-child) {
   margin-right: 30px;
 }
 
+img {
+  width: 261px;
+  height: 160px;
+  border-radius: 15px;
+}
+
+
+
+/*============================= Footer =================================*/
 
 footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .privacyPolicy {
   top: 860px;
   left: 1011px;
+  margin-right: 25px;
 }
 
 .termsOfService {
   top: 860px;
-  left: 1123px;
+  left: 1300px;
+  margin-right: 25px;
 }
-
- 

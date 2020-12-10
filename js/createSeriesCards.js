@@ -23,6 +23,7 @@ class CreateSeriesCards {
 		console.log('seriesData => ', seriesData);
 
 		let seriesWrapper = document.createElement('div');
+		seriesWrapper.className = 
 		seriesWrapper.innerHTML = `
 			<p>Серія #1</p>
 			<p>Початок кінця</p>
@@ -46,5 +47,8 @@ class CreateSeriesCards {
 	}
 }
 
-let createSeriesCards = new CreateSeriesCards('series-container');
+let createSeriesCards = new CreateSeriesCards('seriesContainer');
+
+
+
 
