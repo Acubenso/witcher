@@ -1,54 +1,61 @@
 // клас для створення карточок з серіями
 class CreateSeriesCards {
-	constructor(baseContainerId) {
-		this.baseContainer = document.getElementById(baseContainerId);
+    constructor(baseContainerId) {
+        this.baseContainer = document.getElementById(baseContainerId);
 
-		if (this.baseContainer == null) {
-			console.error(`base container => ${this.baseContainer}`);
-		} else {
-			// якщо контейнер знайдено, то ми його чистимо перед тим, як заповнити даними
-			while (this.baseContainer.firstChild) {
-				this.baseContainer.removeChild(this.baseContainer.firstChild);
-			}
-		}
+        if (this.baseContainer == null) {
+            console.error(`base container => ${this.baseContainer}`);
+        } else {
+            // якщо контейнер знайдено, то ми його чистимо перед тим, як заповнити даними
+            while (this.baseContainer.firstChild) {
+                this.baseContainer.removeChild(this.baseContainer.firstChild);
+            }
+        }
 
-		this.init();
-	}
+        this.init();
+    }
 
-	init() {
-		this.renderCards();
-	}
+    init() {
+        this.renderCards();
+    }
 
-	renderCards() {
-		console.log('seriesData => ', seriesData);
+    renderCards() {
+        console.log('seriesData => ', seriesData);
+        //обробляємо отримані дані і рендеримо карточки серій
+        seriesData.forEach(el => {
+            let seriesWrapper = document.createElement('div');
 
-		let seriesWrapper = document.createElement('div');
-		seriesWrapper.className = 
-		seriesWrapper.innerHTML = `
-			<p>Серія #1</p>
-			<p>Початок кінця</p>
-			<img src="./img/card-image.jpg">
+            seriesWrapper.classList.add('series-wrapper');
+            seriesWrapper.style.cssText = `
+				background: url('${el.image}')no-repeat;
+				background-position: center;
+			`;
 
-			<p>Серія #2</p>
-			<p>Чотири знаки</p>
-			<img src="./img/card-image2x.jpg">
+            seriesWrapper.innerHTML = `
+				<p class="series-count">Серія#${el.episode}</p>
+				<p class="series-name">${el.seriesName}</p>
+			`
 
-			<p>Серія #3</p>
-            <p>Зняти маски</p>
-            <img src="./img/card-image3x.jpg">
-		
-			<p>Серія #4</p>
-            <p>Розслідування</p>
-            <img src="./img/card-image4x.jpg">
-		`;
-		
+			let seriesCount = document.querySelector('series-count');
+			let seriesName = document.querySelector('series-name');
 
-		this.baseContainer.appendChild(seriesWrapper);
-	}
+            seriesWrapper.addEventListener('click', () => {
+            	let iframe = document.createElement("iframe");	
+
+            	seriesCount.remove();
+            	seriesName.remove();
+            	
+
+                
+
+                console.log(`click на серію #${el.episode}${el.seriesName}, відкрити модалку і передати туди iframe з src="${el.iframeSrc}"`);
+            });
+
+
+            this.baseContainer.appendChild(seriesWrapper);
+        });
+
+    }
 }
 
 let createSeriesCards = new CreateSeriesCards('seriesContainer');
-
-
-
-

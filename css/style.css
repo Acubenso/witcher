@@ -30,7 +30,7 @@ body {
     cursor: pointer;
 }
 
-ul>li:not(:last-child) {
+ul > li:not(:last-child) {
     margin-right: 25px;
 }
 
@@ -57,6 +57,7 @@ svg:hover {
 
 .rating {
   border: none;
+  margin-bottom: 50px;
 }
 
 .rating-name {
@@ -131,10 +132,10 @@ svg:hover {
     font-family: 'Pirata One', cursive;
     font-weight: 500;
     font-size: 76px;
-    margin-bottom: 10px;
+    margin-bottom: 45px;
 }
 
-.serialDeslription {
+.serialDescription {
   margin-bottom: 40px;
 }
 
@@ -154,7 +155,6 @@ svg:hover {
 .btn {
   width: 132px;
   height: 132px;
-  /*background-color: #9D2929;*/
   opacity: 50%;
   border-radius: 50%;
   display: flex;
@@ -164,7 +164,6 @@ svg:hover {
 }
 
 .btn-inside {
-  /*background: url("../img/vector.jpg");*/
   background-color: #9D2929;
   width: 100px;
   height: 100px;
@@ -208,15 +207,6 @@ svg:hover {
   margin-right: 50px;
 }
 
-/*.btn-play-wrapp:hover {
-  width: 160px;
-  height: 160px;
-}
-
- .btn-play-wrapp:active {
-  width: 140px;
-  height: 140px;
-}*/
 
 .wrapMainDescription {
   display: flex;
@@ -252,7 +242,33 @@ img {
   border-radius: 15px;
 }
 
+.series-wrapper {
+  padding: 10px;
+  width: 165px;
+  height: 115px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-position: top center;
+  transition: all 0.4s ease;
+}
 
+.series-wrapper:hover {
+  transform: scale(1.1);
+}
+
+.series-wrapper:active {
+  transform: scale(1);
+}
+
+.series-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.series-count {
+  margin-top: 45px;
+  font-size: 12px;
+}
 
 /*============================= Footer =================================*/
 
