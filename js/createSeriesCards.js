@@ -69,56 +69,27 @@ class CreateSeriesCards {
 					<p class="series-name">${el.seriesName}</p>
 			`;
 
-			// event click на карточку із серією
-			seriesWrapper.addEventListener('click', () => {
-				console.log(`click на серію #${el.episode} ${el.seriesName}, відкрити модалку і передати туди iframe з src="${el.iframeSrc}"`);
-			});
-
-			this.baseContainer.appendChild(seriesWrapper);
-		});
-		
-		// <p>Серія #1</p>
-		// <p>Початок кінця</p>
-		// <img src="./img/card-image.jpg">
-
-		// <p>Серія #2</p>
-		// <p>Чотири знаки</p>
-		// <img src="./img/card-image2x.jpg">
-
-		// <p>Серія #3</p>
-		// 			<p>Зняти маски</p>
-		// 			<img src="./img/card-image3x.jpg">
-	
-		// <p>Серія #4</p>
-		// 			<p>Розслідування</p>
-		// 			<img src="./img/card-image4x.jpg">
-
-	}
-}
->>>>>>> b6c01ce3afc4ae8c502a3b361b9b73a424a7a5ff
-
-            seriesWrapper.innerHTML = `
-				<p class="series-count">Серія#${el.episode}</p>
-				<p class="series-name">${el.seriesName}</p>
-			`;
 
             let modal = document.querySelector('#series-modal');
             let iframe = document.querySelector('.series-iframe');
             console.log(modal);
             console.log(iframe);
 
-            seriesWrapper.addEventListener('click', () => {
-			    modal.style.display = 'block';
-                iframe.setAttribute('src', el.iframeSrc);     	
 
 
-            });
 
 
-            this.baseContainer.appendChild(seriesWrapper);
-        });
+			seriesWrapper.addEventListener('click', () => {
+ 		        modal.style.display = 'block';
+                iframe.setAttribute('src', el.iframeSrc);       
 
-    }
+
+        		});
+
+			this.baseContainer.appendChild(seriesWrapper);
+		});
+		
+	}
 }
 
 let createSeriesCards = new CreateSeriesCards('seriesContainer');
