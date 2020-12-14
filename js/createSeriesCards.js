@@ -34,21 +34,18 @@ class CreateSeriesCards {
             seriesWrapper.innerHTML = `
 				<p class="series-count">Серія#${el.episode}</p>
 				<p class="series-name">${el.seriesName}</p>
-			`
+			`;
 
-			let seriesCount = document.querySelector('series-count');
-			let seriesName = document.querySelector('series-name');
+            let modal = document.querySelector('#series-modal');
+            let iframe = document.querySelector('.series-iframe');
+            console.log(modal);
+            console.log(iframe);
 
             seriesWrapper.addEventListener('click', () => {
-            	let iframe = document.createElement("iframe");	
+			    modal.style.display = 'block';
+                iframe.setAttribute('src', el.iframeSrc);     	
 
-            	seriesCount.remove();
-            	seriesName.remove();
-            	
 
-                
-
-                console.log(`click на серію #${el.episode}${el.seriesName}, відкрити модалку і передати туди iframe з src="${el.iframeSrc}"`);
             });
 
 

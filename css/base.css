@@ -77,7 +77,7 @@ video {
   align-items: center;
 }
 
-.series-block .d-flex div:not(last-child) {
+.series-block .d-flex div:not(:last-child) {
   margin-right: 20px;
 }
 
