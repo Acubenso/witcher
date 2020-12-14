@@ -296,6 +296,7 @@ footer {
   margin-right: 25px;
 }
 
+<<<<<<< HEAD
 /*====================================== Modal window for description div(in header) =======================*/
 
 .descriptionModal {
@@ -440,4 +441,31 @@ footer {
   height: 100%;
   top: 0;
   left: 0;   
+=======
+.series-wrapper {
+  padding: 10px;
+  width: 165px;
+  height: 115px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.series-wrapper:hover {
+  transform: scale(1.1);
+}
+
+.series-wrapper:active {
+  transform: scale(1);
+}
+
+.series-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.series-count {
+  margin-top: 45px;
+  font-size: 12px;
+>>>>>>> b6c01ce3afc4ae8c502a3b361b9b73a424a7a5ff
 }
