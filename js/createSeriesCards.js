@@ -20,39 +20,50 @@ class CreateSeriesCards {
     }
 
     renderCards() {
-        console.log('seriesData => ', seriesData);
-        //обробляємо отримані дані і рендеримо карточки серій
-        seriesData.forEach(el => {
-            let seriesWrapper = document.createElement('div');
+            console.log('seriesData => ', seriesData);
+            //обробляємо отримані дані і рендеримо карточки серій
+            seriesData.forEach(el => {
+                    let seriesWrapper = document.createElement('div');
 
-            seriesWrapper.classList.add('series-wrapper');
-            seriesWrapper.style.cssText = `
-				background: url('${el.image}')no-repeat;
-				background-position: center;
-			`;
+                    seriesWrapper.classList.add('series-wrapper');
+                    seriesWrapper.style.cssText = `
+                background: url('${el.image}')no-repeat;
+                background-position: center;
+            `;
 
-            seriesWrapper.innerHTML = `
-				<p class="series-count">Серія#${el.episode}</p>
-				<p class="series-name">${el.seriesName}</p>
-			`;
+                    seriesWrapper.innerHTML = `
+                <p class="series-count">Серія#${el.episode}</p>
+                <p class="series-name">${el.seriesName}</p>
+            `;
 
-            let modal = document.querySelector('#series-modal');
-            let iframe = document.querySelector('.series-iframe');
-            console.log(modal);
-            console.log(iframe);
+                    let modal = document.querySelector('#seriesModal');
+                    let iframe = document.querySelector('.series-iframe');
+                    const seriesCloseJS = document.querySelector('.seriesClose');
+                    console.log(modal);
+                    console.log(iframe);
 
-            seriesWrapper.addEventListener('click', () => {
-			    modal.style.display = 'block';
-                iframe.setAttribute('src', el.iframeSrc);     	
+                    seriesWrapper.addEventListener('click', () => {
+                        modal.style.display = 'block';
+                        iframe.setAttribute('src', el.iframeSrc);
+                    });
 
 
-            });
+                    seriesCloseJS.onclick = function() {
+                        modal.style.display = 'none';
+                    }
+
+                    window.onclick = function() {
+                        if (event.target == modal) {
+                            modal.style.display = 'none';
+                        }
+                    }
 
 
-            this.baseContainer.appendChild(seriesWrapper);
-        });
+                    
+                        this.baseContainer.appendChild(seriesWrapper);
+                    });
 
-    }
-}
+                }
+            }
 
-let createSeriesCards = new CreateSeriesCards('seriesContainer');
+            let createSeriesCards = new CreateSeriesCards('seriesContainer');

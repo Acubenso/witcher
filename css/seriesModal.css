@@ -1,4 +1,4 @@
-.seriesModal {
+.series-modal {
 	display: none;
     position: fixed;
     z-index: 1;
@@ -30,5 +30,11 @@
 	z-index: 1;
 	color: red;
 	font-size: 2em;
+    font-weight: bold;
+	cursor: pointer;
+    font-size: 28px;
+    columns: #aaa;
 }
 
+
+    
