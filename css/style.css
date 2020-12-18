@@ -297,8 +297,8 @@ footer {
 }
 
 /*====================================== Modal window for description div(in header) =======================*/
-
-.descriptionModal {
+/*
+.description-modal {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -312,12 +312,12 @@ footer {
   transition: all 0.8s ease 0s;
 }
 
-.descriptionModal:target {
+.description-modal:target {
   opacity: 1;
   visibility: visible;
 }
 
-.descriptionModal:target .descriptionModal-content {
+.description-modal:target .descriptionModal-content {
   opacity: 1;
   transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
 }
@@ -368,3 +368,4 @@ footer {
   left: 0;  
 }
 
+*/

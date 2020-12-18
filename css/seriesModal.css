@@ -23,7 +23,7 @@
 	border: 3px solid black;
 }
 
-.seriesClose {
+.seriesModalClose {
 	top: 10px;
 	right: 10px;
 	position: absolute;
@@ -37,4 +37,6 @@
 }
 
 
-    
+.seriesModalClose:hover {
+	transform: scale(1.5, 1.5);
+}    

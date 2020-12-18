@@ -1,18 +1,28 @@
-const myModal = document.querySelector('#myModal');
-const btn = document.querySelector('#myBtn');
-const span = document.querySelector('.close');
+const reviewBtn = document.querySelector('#reviewBtn');
+const reviewModal = document.querySelector('#reviewModal');
+const reviewModalClose = document.querySelector('.reviewModalClose');
 
 
-btn.onclick = function() {
-	myModal.style.display = 'block';
-}
+reviewBtn.onclick = function() {
+	reviewModal.style.display = 'block';
+};
 
-span.onclick = function() {
-	myModal.style.display = 'none';
-}
 
-window.onclick = function() {
-	if(event.target == myModal) {
-		myModal.style.display = 'none';
+reviewModalClose.onclick = function() {
+	reviewModal.style.display = 'none';
+};
+
+	
+document.addEventListener('keydown', function(event) {
+  if(event.which === 27){
+  	reviewModal.style.display = 'none';
+  }
+});	
+
+
+
+window.onclick = function(e) {
+	if(e.target == reviewModal) {
+		reviewModal.style.display = 'none';
 	}
 }

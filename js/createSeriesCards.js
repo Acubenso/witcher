@@ -20,50 +20,62 @@ class CreateSeriesCards {
     }
 
     renderCards() {
-            console.log('seriesData => ', seriesData);
-            //обробляємо отримані дані і рендеримо карточки серій
-            seriesData.forEach(el => {
-                    let seriesWrapper = document.createElement('div');
+        console.log('seriesData => ', seriesData);
+        //обробляємо отримані дані і рендеримо карточки серій
+        seriesData.forEach(el => {
+            let seriesWrapper = document.createElement('div');
 
-                    seriesWrapper.classList.add('series-wrapper');
-                    seriesWrapper.style.cssText = `
+            seriesWrapper.classList.add('series-wrapper');
+            seriesWrapper.style.cssText = `
                 background: url('${el.image}')no-repeat;
                 background-position: center;
             `;
 
-                    seriesWrapper.innerHTML = `
+            seriesWrapper.innerHTML = `
                 <p class="series-count">Серія#${el.episode}</p>
                 <p class="series-name">${el.seriesName}</p>
             `;
 
-                    let modal = document.querySelector('#seriesModal');
-                    let iframe = document.querySelector('.series-iframe');
-                    const seriesCloseJS = document.querySelector('.seriesClose');
-                    console.log(modal);
-                    console.log(iframe);
-
-                    seriesWrapper.addEventListener('click', () => {
-                        modal.style.display = 'block';
-                        iframe.setAttribute('src', el.iframeSrc);
-                    });
+            let modal = document.querySelector('#seriesModal');
+            let iframe = document.querySelector('.series-iframe');
+            const seriesModalClose = document.querySelector('.seriesModalClose');
 
 
-                    seriesCloseJS.onclick = function() {
-                        modal.style.display = 'none';
-                    }
-
-                    window.onclick = function() {
-                        if (event.target == modal) {
-                            modal.style.display = 'none';
-                        }
-                    }
+            seriesWrapper.addEventListener('click', () => {
+                iframe.setAttribute('src', el.iframeSrc);
+                modal.style.display = 'block';
+            });
 
 
-                    
-                        this.baseContainer.appendChild(seriesWrapper);
-                    });
-
+            seriesModalClose.onclick = function() {
+                if (modal.style.display = 'none') {
+                    iframe.setAttribute('src', null);
                 }
             }
 
-            let createSeriesCards = new CreateSeriesCards('seriesContainer');
+            window.onclick = function() {
+                if (event.target == modal) {
+                    if (modal.style.display = 'none') {
+                        iframe.setAttribute('src', null);
+                    }
+                }
+
+            }
+
+            // document.addEventListener('keydown', function(event) {
+            //     if (event.which === 27) {
+            //         modal.style.display = 'none';
+            //         iframe.setAttribute('src', null);
+            //     }
+            // });
+
+            this.baseContainer.appendChild(seriesWrapper);
+        });
+
+    }
+}
+
+let createSeriesCards = new CreateSeriesCards('seriesContainer');
+
+
+localStorage.setItem('Sitemnem', 'Hello World!');
