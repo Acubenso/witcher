@@ -12,6 +12,7 @@ trailerBtn.onclick = function() {
 
 trailerModalClose.onclick = function() {
     trailerModal.style.display = 'none';
+    trailerIframe.setAttribute('src', null);
 };
 
 

@@ -13,6 +13,7 @@ trailerBtnRight.onclick = function() {
 
 trailerModalCloseRight.onclick = function() {
     trailerModalRight.style.display = 'none';
+    trailerIframe.setAttribute('src', null);
 };
 
 document.addEventListener('keydown', function(event) {
