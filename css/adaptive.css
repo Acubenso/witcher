@@ -19,12 +19,6 @@
 	.wrapMainDescription {
 		flex-wrap: wrap;
 	}
-	.mainDescription, .btn-play-wrap {
-		width: 100%;
-	}
-	footer {
-		flex-wrap: wrap;
-	}
 	.mainDescription {
 		width: 100%;
 	}
@@ -38,19 +32,49 @@
 	.container {
 		width: 540px;
 	}
-
+	footer {
+		flex-wrap: wrap;
+	}
+	.rights, .footerInfo {
+		width: 100%;
+	}
+	.d-a-j {
+		flex-wrap: wrap;
+	}
+	.adaptive-left {
+		width: 100%;
+	}
+	.adaptive-social {
+		width: 100%;
+	}	
 }
 
 
 @media screen and (max-width: 575px) {
 	.container {
-		width: 100%;
+		width: 375px;
 		padding: 0 15px;
+	}
+
+	/*.d-a-j {
+		flex-wrap: wrap;
+	}
+	.adaptive-left {
+		width: 100%;
+	}
+	.adaptive-social {
+		width: 100%;
+	}
+
+	.wrapMainDescription {
+		flex-wrap: wrap;
+	}
+
+	.mainDescription, .btn-play-wrap {
+		width: 100%;
 	}
 	footer {
 		flex-wrap: wrap;
 	}
-	.mainDescription, .btn-play-wrap {
-		width: 100%;
-	}
+
 }
