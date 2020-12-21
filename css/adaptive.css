@@ -1,80 +1,166 @@
+/*========================= 1200px ============================*/
 @media screen and (max-width: 1200px) {
-	.container {
-		width: 1140px;
-	}
+    .container {
+        width: 1140px;
+    }
+
+    .social {
+        z-index: 1;
+    }
+
+    /*========== Mute z-index of rating =============*/
+    .rating-star:nth-of-type(1),
+    .rating-star:nth-of-type(2),
+    .rating-star:nth-of-type(3),
+    .rating-star:nth-of-type(4),
+    .rating-star:nth-of-type(5) {
+        z-index: 0;
+    }
 }
 
+/*========================= 991px - 1199px ============================*/
 @media screen and (max-width: 1199px) {
-	.container {
-		width: 960px;
-	}
+    .container {
+        width: 960px;
+    }
 
 }
 
-
+/*========================= 767px - 991px ============================*/
 @media screen and (max-width: 991px) {
-	.container {
-		width: 720px;
-	}
-	.wrapMainDescription {
-		flex-wrap: wrap;
-	}
-	.mainDescription {
-		width: 100%;
-	}
-	.btn-play-wrap {
-		width: 100%;
-	}
+    .container {
+        width: 720px;
+    }
+
+    .wrapMainDescription {
+        flex-wrap: wrap;
+    }
+
+    .mainDescription {
+        width: 100%;
+    }
+
+    .mainDescription {
+        margin-bottom: 50px;
+    }
 }
 
-
+/*========================= 575px - 767px ============================*/
 @media screen and (max-width: 767px) {
-	.container {
-		width: 540px;
-	}
-	footer {
-		flex-wrap: wrap;
-	}
-	.rights, .footerInfo {
-		width: 100%;
-	}
-	.d-a-j {
-		flex-wrap: wrap;
-	}
-	.adaptive-left {
-		width: 100%;
-	}
-	.adaptive-social {
-		width: 100%;
-	}	
+    body.lock {
+        overflow: hidden;
+    }
+
+
+    .container {
+        width: 540px;
+        margin: 0;
+    }
+
+    .header-body {
+        height: 60px;
+    }
+
+    .header-logo img {
+        width: 33px;
+        height: 24px;
+        z-index: ;
+    }
+
+    /*============== Change burger to X ====================*/
+    .header-burger.active span {
+        transform: scale(0);
+    }
+
+    .header-burger.active:before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+
+    .header-burger.active:after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+
+    /*=======================================================*/
+    .header-menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: all 0.3s ease 0s;
+        background-color: #141218;
+        opacity: 0.9;
+        padding: 5px 0px 0px 10px;
+    }
+
+    .header-menu.active {
+        top: 0;
+    }
+
+    .header-menu .header-list {
+        margin-top: 80px;
+        display: block;
+    }
+
+    .social {
+        display: none;
+    }
+
+    /*======================= Drawing burger menu ============================*/
+    .header-burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        position: relative;
+        z-index: 3;
+    }
+
+    .header-burger span {
+        position: absolute;
+        background-color: #fff;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header-burger:before,
+    .header-burger:after {
+        content: '';
+        background-color: #fff;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header-burger:before {
+        top: 0px;
+    }
+
+    .header-burger:after {
+        bottom: 0px;
+    }
+
+    /*=================================================================*/
+    footer {
+        flex-wrap: wrap;
+    }
+
+    .rights,
+    .footerInfo {
+        width: 100%;
+    }
 }
 
-
+/*========================= 0px - 575px ============================*/
 @media screen and (max-width: 575px) {
-	.container {
-		width: 375px;
-		padding: 0 15px;
-	}
-
-	/*.d-a-j {
-		flex-wrap: wrap;
-	}
-	.adaptive-left {
-		width: 100%;
-	}
-	.adaptive-social {
-		width: 100%;
-	}
-
-	.wrapMainDescription {
-		flex-wrap: wrap;
-	}
-
-	.mainDescription, .btn-play-wrap {
-		width: 100%;
-	}
-	footer {
-		flex-wrap: wrap;
-	}
-
-}
+    .container {
+        width: 375px;
+        padding: 0 15px;
+    }
