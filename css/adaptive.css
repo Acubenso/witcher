@@ -9,13 +9,13 @@
     }
 
     /*========== Mute z-index of rating =============*/
-    .rating-star:nth-of-type(1),
+/*    .rating-star:nth-of-type(1),
     .rating-star:nth-of-type(2),
     .rating-star:nth-of-type(3),
     .rating-star:nth-of-type(4),
     .rating-star:nth-of-type(5) {
         z-index: 0;
-    }
+*/    }
 }
 
 /*========================= 991px - 1199px ============================*/
@@ -61,12 +61,6 @@
         height: 60px;
     }
 
-    .header-logo img {
-        width: 50px;
-        height: 36px;
-        z-index: ;
-    }
-
     /*============== Change burger to X ====================*/
     .header-burger.active span {
         transform: scale(0);
@@ -97,7 +91,7 @@
     }
 
     .header-menu.active {
-        top: 0;
+        top: 0px;
     }
 
     .header-menu .header-list {
@@ -115,6 +109,10 @@
         display: none;
     }
 
+    .social.active {
+    	display: block;
+        margin-top: 20px;
+    }
     /*======================= Drawing burger menu ============================*/
     .header-burger {
         display: block;
@@ -153,6 +151,23 @@
     .header-burger:after {
         bottom: 0px;
     }
+
+    /*=================== Change modal window ==========================*/
+    .reviewModal-content {
+    	width: 50px;
+    	height: 50px;
+    }
+
+
+
+
+
+
+
+
+
+
+
 
     /*=================================================================*/
     footer {

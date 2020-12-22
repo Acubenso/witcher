@@ -76,6 +76,3 @@ class CreateSeriesCards {
 }
 
 let createSeriesCards = new CreateSeriesCards('seriesContainer');
-
-
-localStorage.setItem('Sitemnem', 'Hello World!');
