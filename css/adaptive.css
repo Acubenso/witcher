@@ -9,13 +9,14 @@
     }
 
     /*========== Mute z-index of rating =============*/
-/*    .rating-star:nth-of-type(1),
+    /*    .rating-star:nth-of-type(1),
     .rating-star:nth-of-type(2),
     .rating-star:nth-of-type(3),
     .rating-star:nth-of-type(4),
     .rating-star:nth-of-type(5) {
         z-index: 0;
-*/    }
+*/
+}
 }
 
 /*========================= 991px - 1199px ============================*/
@@ -100,9 +101,9 @@
     }
 
     .header-link {
-    	font-size: 28px;
-    	line-height: 1.5;
-    	text-transform: uppercase;
+        font-size: 28px;
+        line-height: 1.5;
+        text-transform: uppercase;
     }
 
     .social {
@@ -110,9 +111,10 @@
     }
 
     .social.active {
-    	display: block;
+        display: block;
         margin-top: 20px;
     }
+
     /*======================= Drawing burger menu ============================*/
     .header-burger {
         display: block;
@@ -154,8 +156,8 @@
 
     /*=================== Change modal window ==========================*/
     .reviewModal-content {
-    	width: 50px;
-    	height: 50px;
+        width: 50px;
+        height: 50px;
     }
 
 
@@ -170,6 +172,16 @@
 
 
     /*=================================================================*/
+    .series-iframe {
+        width: 350px;
+        height: 250px;
+    }
+
+    .seriesModal-content {
+        width: 350px!important;
+        height: 250px!important;
+    }
+
     footer {
         flex-wrap: wrap;
     }
