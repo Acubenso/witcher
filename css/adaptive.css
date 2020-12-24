@@ -156,10 +156,7 @@
     }
 
     /*=================== Change modal window ==========================*/
-    .reviewModal-content {
-        width: 50px;
-        height: 50px;
-    }
+   
 
 
 
@@ -179,8 +176,27 @@
     }
 
     .seriesModal-content {
-        width: 350px !important;
-        height: 250px !important;
+        width: 350px;
+        height: 250px;
+    }
+
+    .descriptionModal-content {
+    	width: 400px;
+    	height: auto;
+    }
+
+    #seriesContainer {
+    	display: grid;
+    	grid-template-columns: repeat(2, 1fr);
+    	grid-gap: 20px;
+    }
+
+    #seriesContainer .series-wrapper {
+    	margin-right: 0;
+    }
+
+    .btn-play-wrapp {
+    	margin: 0px auto 50px auto;  
     }
 
     footer {
@@ -190,6 +206,7 @@
     .rights,
     .footerInfo {
         width: 100%;
+        text-align-last: center;
     }
 
     /*========== Mute z-index of rating =============*/
