@@ -15,8 +15,9 @@
     .rating-star:nth-of-type(4),
     .rating-star:nth-of-type(5) {
         z-index: 0;
+	}
 */
-}
+
 }
 
 /*========================= 991px - 1199px ============================*/
@@ -178,8 +179,8 @@
     }
 
     .seriesModal-content {
-        width: 350px!important;
-        height: 250px!important;
+        width: 350px !important;
+        height: 250px !important;
     }
 
     footer {
@@ -190,11 +191,19 @@
     .footerInfo {
         width: 100%;
     }
-}
 
-/*========================= 0px - 575px ============================*/
-@media screen and (max-width: 575px) {
-    .container {
-        width: 375px;
-        padding: 0 15px;
+    /*========== Mute z-index of rating =============*/
+    .rating-star:nth-of-type(1),
+    .rating-star:nth-of-type(2),
+    .rating-star:nth-of-type(3),
+    .rating-star:nth-of-type(4),
+    .rating-star:nth-of-type(5) {
+        z-index: 0;
     }
+}
+    /*========================= 0px - 575px ============================*/
+    @media screen and (max-width: 575px) {
+        .container {
+            width: 375px;
+            padding: 0 15px;
+        }
