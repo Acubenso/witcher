@@ -14,7 +14,7 @@ reviewModalClose.onclick = function() {
 
 	
 document.addEventListener('keydown', function(event) {
-  if(event.which === 27){
+  if(event.keyCode === 27){
   	reviewModal.style.display = 'none';
   }
 });	

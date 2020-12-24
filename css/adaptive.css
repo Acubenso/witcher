@@ -156,7 +156,6 @@
     }
 
     /*=================== Change modal window ==========================*/
-   
 
 
 
@@ -168,6 +167,10 @@
 
 
 
+    .reviewModal-content {
+        width: 380px;
+        height: 350px;
+    }
 
     /*=================================================================*/
     .series-iframe {
@@ -181,22 +184,22 @@
     }
 
     .descriptionModal-content {
-    	width: 400px;
-    	height: auto;
+        width: 380px;
+        height: auto;
     }
 
     #seriesContainer {
-    	display: grid;
-    	grid-template-columns: repeat(2, 1fr);
-    	grid-gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
     }
 
     #seriesContainer .series-wrapper {
-    	margin-right: 0;
+        margin-right: 0;
     }
 
     .btn-play-wrapp {
-    	margin: 0px auto 50px auto;  
+        margin: 0px auto 50px auto;
     }
 
     footer {
@@ -218,9 +221,10 @@
         z-index: 0;
     }
 }
-    /*========================= 0px - 575px ============================*/
-    @media screen and (max-width: 575px) {
-        .container {
-            width: 375px;
-            padding: 0 15px;
-        }
+
+/*========================= 0px - 575px ============================*/
+@media screen and (max-width: 575px) {
+    .container {
+        width: 375px;
+        padding: 0 15px;
+    }
