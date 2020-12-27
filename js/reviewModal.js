@@ -1,6 +1,8 @@
 const reviewBtn = document.querySelector('#reviewBtn');
-const reviewModal = document.querySelector('#reviewModal');
+let reviewModal = document.querySelector('#reviewModal');
+let reviewModalContent = document.querySelector('.reviewModal-content');
 const reviewModalClose = document.querySelector('.reviewModalClose');
+
 
 
 reviewBtn.onclick = function() {
@@ -20,9 +22,9 @@ document.addEventListener('keydown', function(event) {
 });	
 
 
+window.addEventListener('click', function(event) {
+  if(event.target === reviewModal && event.target !== reviewModalContent){
+  	reviewModal.style.display = 'none';
+  }
+});
 
-window.onclick = function(e) {
-	if(e.target == reviewModal) {
-		reviewModal.style.display = 'none';
-	}
-}

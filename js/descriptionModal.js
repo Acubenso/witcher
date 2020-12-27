@@ -1,5 +1,6 @@
 const descriptionBtn = document.querySelector('#descriptionBtn');
 const descriptionModal = document.querySelector('.description-modal');
+const descriptionModalContent = document.querySelector('.descriptionModal-content');
 const descriptionModalClose = document.querySelector('.descriptionModalClose');
 
 
@@ -11,11 +12,11 @@ descriptionModalClose.onclick = function(){
 	descriptionModal.style.display = 'none';
 };	
 
-// window.onclick = function(e){
-// 	if(e.target == descriptionModal){
-// 		descriptionModal.style.display = 'none';
-// 	}
-// }
+window.addEventListener('click', function(event) {
+  if(event.target === descriptionModal && event.target !== descriptionModalContent){
+  	descriptionModal.style.display = 'none';
+  }
+});
 
 document.addEventListener('keydown', function(event) {
   if(event.keyCode === 27){

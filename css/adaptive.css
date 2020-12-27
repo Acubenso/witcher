@@ -15,7 +15,7 @@
     .rating-star:nth-of-type(4),
     .rating-star:nth-of-type(5) {
         z-index: 0;
-	}
+    }
 */
 
 }
@@ -155,24 +155,23 @@
         bottom: 0px;
     }
 
-    /*=================== Change modal window ==========================*/
-
-
-
-
-
-
-
-
-
-
-
-    .reviewModal-content {
-        width: 380px;
-        height: 350px;
+    /*=========================================================================*/
+    /*=================== Change description modal window =========================*/
+    .description-modal {
+        z-index: 6;
     }
 
-    /*=================================================================*/
+    .descriptionModal-content {
+        width: 380px;
+        height: auto;
+    }
+
+    /*=========================================================================*/
+    /*=================== Change trailer modal window =========================*/
+    .series-modal {
+        z-index: 7;
+    }
+
     .series-iframe {
         width: 350px;
         height: 250px;
@@ -181,11 +180,6 @@
     .seriesModal-content {
         width: 350px;
         height: 250px;
-    }
-
-    .descriptionModal-content {
-        width: 380px;
-        height: auto;
     }
 
     #seriesContainer {
@@ -201,7 +195,24 @@
     .btn-play-wrapp {
         margin: 0px auto 50px auto;
     }
+/*
+    .seriesModalClose:hover {
+        font-size: 2em;
+    }*/
 
+    /*=========================================================================*/
+    /*=================== Change review modal window ==========================*/
+    .review-modal {
+        z-index: 8;
+    }
+
+    .reviewModal-content {
+        width: 380px;
+        height: 350px;
+    }
+
+    /*=========================================================================*/
+    /*=================================== Footer ===============================*/
     footer {
         flex-wrap: wrap;
     }
@@ -212,14 +223,7 @@
         text-align-last: center;
     }
 
-    /*========== Mute z-index of rating =============*/
-    .rating-star:nth-of-type(1),
-    .rating-star:nth-of-type(2),
-    .rating-star:nth-of-type(3),
-    .rating-star:nth-of-type(4),
-    .rating-star:nth-of-type(5) {
-        z-index: 0;
-    }
+
 }
 
 /*========================= 0px - 575px ============================*/

@@ -16,8 +16,10 @@ trailerModalClose.onclick = function() {
 };
 
 
-// document.addEventListener('keydown', function(event) {
-//     if (event.keyCode === 27) {
-//         trailerModal.style.display = 'none';
-//     }
-// });
+document.addEventListener('keydown', function(event) {
+    if (event.keyCode === 27) {
+        trailerModal.style.display = 'none';
+    	trailerIframe.setAttribute('src', null);
+    }
+});
+
