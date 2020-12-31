@@ -76,3 +76,33 @@ class CreateSeriesCards {
 }
 
 let createSeriesCards = new CreateSeriesCards('seriesContainer');
+
+
+
+
+// ================ Change header background color during skrolling window ======
+let quantity = document.querySelector('.quantity');
+let headerSkroll = document.querySelector('.header');
+let scrollQuantity = window.scrollY;
+
+window.addEventListener('scroll', function() {
+    console.log(window.scrollY);
+    if (window.scrollY >= 100) {
+        headerSkroll.style.backgroundColor = '#141218';
+    } else {
+        headerSkroll.style.backgroundColor = '';
+    }
+});
+
+
+let scrollToTop = document.querySelector('.legal');
+
+scrollToTop.addEventListener('click', (event) => {
+    event.preventDefault();
+    window.scrollTo({
+      top: 1,
+      behavior: 'smooth',
+    })
+});
+
+
