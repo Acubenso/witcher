@@ -330,4 +330,6 @@ footer {
 
 .legal {
   cursor: pointer;
+  font-size: 17px;
+  color: brown;
 }
